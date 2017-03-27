@@ -15,21 +15,14 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="http://d3js.org/topojson.v0.min.js"></script>	  
 	<script type="text/javascript" src="https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"></script>
-	<script type="text/javascript">
-    	$(function(){
-        $.getJSON('https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json',function(data){
-            console.log('success');
-            $.each(data.State,function(i,sta){
-                $('ul').append('<li>'+sta.FIELD1+' '+sta.FIELD2+'</li>');
-            });
-        }).error(function(){
-            console.log('error');
-        });
-    });
-</script>
 	</head>
   <body>
-	  <ul></ul>
+	<script type="text/javascript">
+    $.getJSON("https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json", function(data) {
+        console.log(data);
+        $('body').append(data.State[0].FIELD1);
+    });
+</script>
     <h1>Gender Populations by State (%)</h1>
     <div id="my-container">
 	<h3 id= "myHeader"></h3>
