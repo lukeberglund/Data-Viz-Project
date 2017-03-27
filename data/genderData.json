@@ -1,5 +1,6 @@
-{[
- {
+{
+"State": [ 
+{
    "FIELD1": "United States",
    "FIELD2": "0.49",
    "FIELD3": "0.51"
@@ -258,5 +259,5 @@
    "FIELD1": "Wyoming",
    "FIELD2": "0.5",
    "FIELD3": "0.5"
- }
-]}
+ }]
+}
