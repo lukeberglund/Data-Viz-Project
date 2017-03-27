@@ -28,7 +28,7 @@ var treeData;
 
 var oReq = new XMLHttpRequest();
 oReq.onload = reqListener;
-oReq.open("get", "yourFile.txt", true);
+oReq.open("get", "https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json", true);
 oReq.send();
 
 function reqListener(e) {
