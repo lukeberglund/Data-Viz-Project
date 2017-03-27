@@ -17,17 +17,23 @@
 	<script type="text/javascript" src="https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"></script>
 	</head>
   <body>
-	<script type="text/javascript">
-    $.getJSON("https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json", function(data) {
-        console.log(data);
-        $('body').append(data.State[0].FIELD1);
+	  <script>
+    $.ajax({
+        url: "https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json",
+        dataType: "json",
+        success: function(data) {
+            console.log(data);
+            $('body').append(data.State[0].FIELD1);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log('ERROR', textStatus, errorThrown);
+        }
     });
-</script>
     <h1>Gender Populations by State (%)</h1>
     <div id="my-container">
 	<h3 id= "myHeader"></h3>
     </div>
-
+</script>
     <script type="text/javascript">
 	myHeader.innerhtml= url;    
       	var width = 900;
