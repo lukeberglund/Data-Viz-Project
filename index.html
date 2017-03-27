@@ -15,7 +15,18 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="http://d3js.org/topojson.v0.min.js"></script>	  
 	<script type="text/javascript" src="https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"></script>
-
+	<script type="text/javascript">
+    	$(function(){
+        $.getJSON('https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json',function(data){
+            console.log('success');
+            $.each(data.State,function(i,sta){
+                $('ul').append('<li>'+sta.FIELD1+' '+sta.FIELD2+'</li>');
+            });
+        }).error(function(){
+            console.log('error');
+        });
+    });
+</script>
 	</head>
   <body>
     <h1>Gender Populations by State (%)</h1>
@@ -24,27 +35,7 @@
     </div>
 
     <script type="text/javascript">
-	function setup() {
-  createCanvas(600, 400);
-  noStroke();
-  textSize(20);
-  loadJSON("https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json", drawData);
-}
-
-function drawData(genderData) {
-  // person 1 bubble
-  fill(155, 30, 180, 180);
-  ellipse(250, 200, data.State.FIELD2, data..State.FIELD3); // person1.age = 30
-  fill(255);
-  text(data.State.FIELD1, 210, 200); // person1.name = Morgan
-
-  // person 2 bubble
-  fill(180, 180, 34, 180);
-  ellipse(350, 200, data.State.Alabama, data.State.Alaska); // person2.age = 32
-  fill(255);
-  text(data.State.Arizona, 330, 200); // person2.name = Joss
-}
-	myHeader.innerhtml= treeData;    
+	myHeader.innerhtml= url;    
       	var width = 900;
       	var height = 600;
       	var projection = d3.geo.mercator();
