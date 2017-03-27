@@ -1,20 +1,5 @@
 [
  {
-   "FIELD1": "Title: Population Distribution by Gender | The Henry J. Kaiser Family Foundation",
-   "FIELD2": "",
-   "FIELD3": ""
- },
- {
-   "FIELD1": "Timeframe: 2015",
-   "FIELD2": "",
-   "FIELD3": ""
- },
- {
-   "FIELD1": "Location",
-   "FIELD2": "Male",
-   "FIELD3": "Female"
- },
- {
    "FIELD1": "United States",
    "FIELD2": "0.49",
    "FIELD3": "0.51"
@@ -273,35 +258,5 @@
    "FIELD1": "Wyoming",
    "FIELD2": "0.5",
    "FIELD3": "0.5"
- },
- {
-   "FIELD1": "Notes",
-   "FIELD2": "",
-   "FIELD3": ""
- },
- {
-   "FIELD1": "Population and demographic data on are based on analysis of the Census Bureau’s March 2016 Current Population Survey (CPS; Annual Social and Economic Supplement) and may differ from other population estimates published yearly by the Census Bureau. U.S. and state population data displayed on this site are restricted to the non-institutionalized population. ",
-   "FIELD2": "",
-   "FIELD3": ""
- },
- {
-   "FIELD1": "",
-   "FIELD2": "",
-   "FIELD3": ""
- },
- {
-   "FIELD1": "Data may not sum to totals due to rounding. Population numbers are rounded to the nearest 100.",
-   "FIELD2": "",
-   "FIELD3": ""
- },
- {
-   "FIELD1": "Sources",
-   "FIELD2": "",
-   "FIELD3": ""
- },
- {
-   "FIELD1": "Kaiser Family Foundation estimates based on the Census Bureau's March 2016 Current Population Survey (CPS: Annual Social and Economic Supplement)",
-   "FIELD2": "",
-   "FIELD3": ""
  }
 ]
