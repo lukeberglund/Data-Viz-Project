@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My Data-driven Document</title>
+    <title>Gender Populations by State (%)</title>
 	<style>
      	 path {
         	stroke: white;
@@ -11,14 +11,15 @@
       		}
 	  </style>
 	  
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="http://d3js.org/topojson.v0.min.js"></script>	  
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="http://d3js.org/topojson.v0.min.js"></script>	  
+	  
   </head>
   <body>
     <h1>My Data-driven Document</h1>
     <div id="my-container">
-		<h3 id= "myHeader"></h3>
+	<h3 id= "myHeader"></h3>
     </div>
 
     <script type="text/javascript" src="https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json">
@@ -41,42 +42,6 @@
             .append("path")
             .attr("d", path)
       });
-      var myCourse ={
-  "university":{
-    "name":"Southern Connecticut State University",
-    "abbreviation":"SCSU",
-    "url":"http://southernct.edu/"
-  },
-  "school":{
-    "name":"School of Arts and Sciences",
-    "url":"http://catalog.southernct.edu/undergraduate/school-of-arts-and-sciences.html"
-  },
-  "department":{
-    "name":"Computer Science",
-    "abbreviation":"CSC",
-    "url":"http://www.southernct.edu/academics/schools/arts/departments/computerscience/"
-  },
-  "term":{
-    "name":"Spring 2017",
-    "abbreviation":"201701",
-    "url":"https://www.southernct.edu/offices/registrar/Calendar.html",
-    "start_date":"2017-01-17",
-    "end_date":"2017-05-11"
-  },
-  "course":{
-    "name":"Fundamentals of Internet Programming",
-    "number":"443",
-    "description_url":"http://catalog.southernct.edu/undergraduate/courses/csc443.html"
-  },
-  "section":{
-    "name":"Thursday nights",
-    "number":"01",
-    "start_time":"7:35pm",
-    "end_time":"10:05pm"
-  },
-  "credits":3
-}
-myHeader.innerHTML = myCourse["course"]["name"]
     </script>
   </body>
 </html>
