@@ -23,24 +23,14 @@
     </div>
 
     <script type="text/javascript">
-	    $.ajax({
-  dataType: "json",
-  url: raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json,
-  data: data,
-  success: success
-});
-$.getJSON( "ajax/test.json", function( data ) {
-  var items = [];
-  $.each( data, function( key, val ) {
-    items.push( "<li id='" + key + "'>" + val + "</li>" );
-  });
- 
-  $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "body" );
-	});
-	    
+	(function() {
+		var dataSet = "https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"
+		$.getJSON( flickerAPI, {
+    	tags: "FIELD1",
+    	tagmode: "any",
+   	 format: "json"
+ 	 })
+	})();
 	myHeader.innerhtml= myData["FIELD1"];    
       	var width = 900;
       	var height = 600;
