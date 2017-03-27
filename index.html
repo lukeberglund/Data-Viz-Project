@@ -24,15 +24,25 @@
     </div>
 
     <script type="text/javascript">
-var treeData;
+	function setup() {
+  createCanvas(600, 400);
+  noStroke();
+  textSize(20);
+  loadJSON("https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json", drawData);
+}
 
-var oReq = new XMLHttpRequest();
-oReq.onload = reqListener;
-oReq.open("get", "https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json", true);
-oReq.send();
+function drawData(data) {
+  // person 1 bubble
+  fill(155, 30, 180, 180);
+  ellipse(250, 200, data.State.FIELD2, data..State.FIELD3); // person1.age = 30
+  fill(255);
+  text(data.State.FIELD1, 210, 200); // person1.name = Morgan
 
-function reqListener(e) {
-    treeData = JSON.parse(this.responseText);
+  // person 2 bubble
+  fill(180, 180, 34, 180);
+  ellipse(350, 200, data.State.Alabama, data.State.Alaska); // person2.age = 32
+  fill(255);
+  text(data.State.Arizona, 330, 200); // person2.name = Joss
 }
 	myHeader.innerhtml= treeData;    
       	var width = 900;
