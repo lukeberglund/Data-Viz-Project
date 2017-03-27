@@ -16,14 +16,12 @@
 	<script src="http://d3js.org/topojson.v0.min.js"></script>	  
 	<script type="text/javascript" src="https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"></script>
 	<script>
-		function load() {
 			var mydata = JSON.parse(data);
 			alert(mydata[0].FIELD1);
 			alert(mydata[0].FIELD2);
-		}
 	  </script>
   </head>
-  <body onload="load()">
+  <body>
     <h1>Gender Populations by State (%)</h1>
     <div id="my-container">
 	<h3 id= "myHeader"></h3>
