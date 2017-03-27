@@ -24,8 +24,17 @@
     </div>
 
     <script type="text/javascript">
+var treeData;
 
-	myHeader.innerhtml= genderData;    
+var oReq = new XMLHttpRequest();
+oReq.onload = reqListener;
+oReq.open("get", "yourFile.txt", true);
+oReq.send();
+
+function reqListener(e) {
+    treeData = JSON.parse(this.responseText);
+}
+	myHeader.innerhtml= treeData;    
       	var width = 900;
       	var height = 600;
       	var projection = d3.geo.mercator();
