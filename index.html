@@ -15,7 +15,12 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="http://d3js.org/topojson.v0.min.js"></script>	  
 	<script type="text/javascript" src="https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"></script>
-  </head>
+  	<script type="text/javascript">
+   $(document).ready(function(e) {
+         alert(jsonObject.start.count);
+   });
+</script>
+	</head>
   <body>
     <h1>Gender Populations by State (%)</h1>
     <div id="my-container">
@@ -23,14 +28,7 @@
     </div>
 
     <script type="text/javascript">
-	(function() {
-		var dataSet = "https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"
-		$.getJSON( flickerAPI, {
-    	tags: "FIELD1",
-    	tagmode: "any",
-   	 format: "json"
- 	 })
-	})();
+
 	myHeader.innerhtml= dataSet["FIELD1"];    
       	var width = 900;
       	var height = 600;
