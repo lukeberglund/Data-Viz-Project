@@ -15,15 +15,21 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="http://d3js.org/topojson.v0.min.js"></script>	  
 	<script type="text/javascript" src="genderData.json"></script>
+	<script>
+		function load() {
+			var mydata = JSON.parse(data);
+			alert(mydata[0].FIELD1);
+			alert(mydata[0].FIELD2);
+		}
   </head>
-  <body>
+  <body onload="load()">
     <h1>Gender Populations by State (%)</h1>
     <div id="my-container">
 	<h3 id= "myHeader"></h3>
     </div>
 
     <script type="text/javascript" src="https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json">
-	var mydata = JSON.parse(data);
+	//var mydata = JSON.parse(data);
 	    
 	myHeader.innerhtml= myData["FIELD1"];    
       	var width = 900;
