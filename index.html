@@ -15,8 +15,9 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="http://d3js.org/topojson.v0.min.js"></script>	  
 
-	
-<script type="text/javascript">
+</head>
+  <body>
+	  <script type="text/javascript">
 var myData
 var myResponse
 
@@ -24,6 +25,7 @@ var url = "https://raw.githubusercontent.com/lukeberglund/Data-Viz-Project/maste
 fetch(url)
   .then(function(response) {
     console.log("GOT A RESPONSE:", response)
+	myResponse=response
     response.json()
       .then(function(json){
         console.log("GOT SOME DATA:", json)
@@ -33,8 +35,7 @@ fetch(url)
     console.log("GOT AN ERROR:", err)
   }) // handle errors
 </script>
-</head>
-  <body>
+	  
     <h1>Gender Populations by State (%)</h1>
     <div id="my-container">
 	<h3 id= "myHeader"></h3>
