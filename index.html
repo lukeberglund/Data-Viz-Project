@@ -14,21 +14,25 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="http://d3js.org/topojson.v0.min.js"></script>	  
-	<script type="text/javascript" src="https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"></script>
+	GET text/javascript" src="https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"></script>
+
+	var url = "https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"
+
+fetch(url)
+  .then(function(response) {
+    console.log("GOT A RESPONSE:", response)
+    response.json()
+      .then(function(json){
+        console.log("GOT SOME DATA:", json)
+        // DO SOMETHING WITH THE DATA HERE!
+      })
+  })
+  .catch(function(err){
+    console.log("GOT AN ERROR:", err)
+  }) // handle errors
+	
 	</head>
   <body>
-	  <script>
-    $.ajax({
-        url: "https://raw.github.com/lukeberglund/Data-Viz-Project/master/data/genderData.json",
-        dataType: "json",
-        success: function(data) {
-            console.log(data);
-            $('body').append(data.State[0].FIELD1);
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log('ERROR', textStatus, errorThrown);
-        }
-    });
     <h1>Gender Populations by State (%)</h1>
     <div id="my-container">
 	<h3 id= "myHeader"></h3>
