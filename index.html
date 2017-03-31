@@ -16,8 +16,11 @@
 	<script src="http://d3js.org/topojson.v0.min.js"></script>	  
 
 	
-<script>
-var url = "https://github.com/lukeberglund/Data-Viz-Project/blob/master/data/genderData.json"	
+<script type="text/javascript">
+var myData
+var myResponse
+
+var url = "https://raw.githubusercontent.com/lukeberglund/Data-Viz-Project/master/data/genderData.json"	
 fetch(url)
   .then(function(response) {
     console.log("GOT A RESPONSE:", response)
