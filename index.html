@@ -197,20 +197,20 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	  <p id="aBox" onlick=doThis()>"Hello World"</p>		 
 	<script>
-	document.getElementById("thrid-base").addEventListener("click", function() {
+	document.getElementById("first-base").addEventListener("click", function() {
+    	alert("You clicked first base");
+	}, true);
+		
+	document.getElementById("base1").addEventListener("click", function() {
+    	alert("You clicked the text");
+	}, true);
+		
+	document.getElementById("third-base").getelementsbyclassname("base")[2].addEventListener("click", function() {
     	alert("You clicked third base");
-	}, true);
-		
-	document.getElementById("base1").addEventListener("click", function() {
-    	alert("You clicked the text");
-	}, true);
-		
-	document.getElementById("base1").addEventListener("click", function() {
-    	alert("You clicked the text");
 	}, true);
 	  </script>
   </body>
