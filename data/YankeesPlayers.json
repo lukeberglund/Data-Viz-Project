@@ -1,6 +1,4 @@
 {
-    "result": [
-        {
             "Yankees/roster": [
                 {
                     "BattingAvg": ".282",
@@ -69,6 +67,4 @@
                     "position": "Pitcher"
                 }
             ]
-        }
-    ]
 }
