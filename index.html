@@ -179,7 +179,7 @@
 	    <div id="in-field"></div>
 	    <div id="in-field-grass" class="mowed-grass"></div>
 	    <div id="batting-circle"></div>
-	    <div id="first-base" class="base"></div>
+	    <div id="first-base" class="base" onclick="doThis()"></div>
 	    <div id="second-base" class="base"></div>
 	    <div id="thrid-base" class="base"></div>
 	    <div id="home-plate"></div>
@@ -194,8 +194,15 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
-	  <p>"Hello World"</p> 
+	  <p id="aBox">"Hello World"</p> 
+	  
+	 <script>
+		 function doThis() {
+			 aBox.innerhtml = "It Worked";
+		 }
+	  </script>		 
+	  
   </body>
 </html>
