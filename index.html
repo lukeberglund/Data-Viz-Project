@@ -196,11 +196,12 @@
 	<div id="about">
 	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
-	  <p id="aBox">"Hello World"</p> 
+	  <p id="aBox" onlick="doThis()">"Hello World"</p> 
 	  
 	 <script>
 		 function doThis() {
 			 document.getElementById("first-base").innerhtml = "It Worked";
+			 document.getElementById("aBox").innerhtml = "It Worked";
 		 }
 	  </script>		 
 	  
