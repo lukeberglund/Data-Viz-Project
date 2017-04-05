@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Luke Berglund: Data Vizualization Project</title>
-	   
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>   
 <style>
 	#field{ 
     	    position: absolute;
@@ -197,7 +197,7 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	  <p id="aBox" onlick=doThis()>"Hello World"</p>		 
 	<script>
@@ -211,19 +211,11 @@
 	var myData
 	var myResponse
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
-fetch(url)
-  .then(function(response) {
-    console.log("GOT A RESPONSE:", response)
-	myResponse = response
-    response.json()
-      .then(function(json){
-        console.log("GOT SOME DATA:", json)
-        // DO SOMETHING WITH THE DATA HERE!
-      })
-  })
-  .catch(function(err){
-    console.log("GOT AN ERROR:", err)
-  })
+
+	$.getJSON(url, function(json) {
+  	console.log("GOT SOME DATA:", json)
+  	// DO SOMETHING WITH THE DATA HERE!
+});
 
 	  </script>
   </body>
