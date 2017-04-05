@@ -174,12 +174,7 @@
 	 </style>
 </head>
   <body>
-	  <script>
-		 function doThis() {
-			 document.getElementById("first-base").innerhtml = "It Worked";
-			 document.getElementById("aBox").innerhtml = "It Worked";
-		 }
-	  </script>
+
 	  <div id="stadium">
 	    <div id="field" class="mowed-grass"></div>
 	    <div id="in-field"></div>
@@ -203,6 +198,10 @@
 	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	  <p id="aBox" onlick=doThis()>"Hello World"</p>		 
-	  
+	<script>
+	document.getElementById("first-base").addEventListener("click", function() {
+    	alert("You clicked the P element!");
+}, false);
+	  </script>
   </body>
 </html>
