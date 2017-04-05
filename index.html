@@ -184,7 +184,7 @@
 		  <p id="base1">First Base</p>
 	    </div>
 	    <div id="second-base" class="base"></div>
-	    <div id="thrid-base" class="base"></div>
+	    <div id="third-base" class="base"></div>
 	    <div id="home-plate"></div>
 	    <div id="base-lines"></div>
 	    <div id="pitchers-mound"></div>
@@ -197,21 +197,34 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	  <p id="aBox" onlick=doThis()>"Hello World"</p>		 
 	<script>
 	document.getElementById("first-base").addEventListener("click", function() {
     	alert("You clicked first base");
 	}, true);
-		
-	document.getElementById("base1").addEventListener("click", function() {
-    	alert("You clicked the text");
-	}, true);
-		
-	document.getElementById("third-base").getelementsbyclassname("base")[2].addEventListener("click", function() {
+	document.getElementById("third-base").addEventListener("click", function() {
     	alert("You clicked third base");
 	}, true);
+	
+	var myData
+	var myResponse
+	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
+fetch(url)
+  .then(function(response) {
+    console.log("GOT A RESPONSE:", response)
+	myResponse = response
+    response.json()
+      .then(function(json){
+        console.log("GOT SOME DATA:", json)
+        // DO SOMETHING WITH THE DATA HERE!
+      })
+  })
+  .catch(function(err){
+    console.log("GOT AN ERROR:", err)
+  })
+
 	  </script>
   </body>
 </html>
