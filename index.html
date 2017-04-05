@@ -197,7 +197,7 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	  <p id="aBox" onlick=doThis()>"Hello World"</p>		 
 	<script>
@@ -216,7 +216,11 @@
   	console.log("GOT SOME DATA:", json)
   	});
 	
-	$.each(Yankees, function () {
+	$.each(json, function () {
+  	 $.each(this, function (name, value) {
+      console.log(name + '=' + value);
+   });
+			$.each(url, function () {
   	 $.each(this, function (name, value) {
       console.log(name + '=' + value);
    });
