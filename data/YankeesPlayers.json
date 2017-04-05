@@ -1,0 +1,74 @@
+{
+    "result": [
+        {
+            "Yankees/roster": [
+                {
+                    "BattingAvg": ".282",
+                    "number": "24",
+                    "player": "Gary Sanchez",
+                    "position": "Catcher"
+                },
+                {
+                    "BattingAvg": ".125",
+                    "number": "33",
+                    "player": "Greg Bird",
+                    "position": "First Base"
+                },
+                {
+                    "BattingAvg": ".375",
+                    "number": "14",
+                    "player": "Starlin Castro",
+                    "position": "Second Base"
+                },
+                {
+                    "BattingAvg": ".625",
+                    "number": "12",
+                    "player": "Chase Headley",
+                    "position": "Third Base"
+                },
+                {
+                    "BattingAvg": ".167",
+                    "number": "74",
+                    "player": "Ronald Torreyes",
+                    "position": "Short Stop"
+                },
+                {
+                    "BattingAvg": ".250",
+                    "number": "11",
+                    "player": "Brett Gardner",
+                    "position": "Left Field"
+                },
+                {
+                    "BattingAvg": ".286",
+                    "number": "22",
+                    "player": "Jacoby Ellsbury",
+                    "position": "Center Field"
+                },
+                {
+                    "BattingAvg": ".250",
+                    "number": "99",
+                    "player": "Aaron Judge",
+                    "position": "Right Field"
+                },
+                {
+                    "BattingAvg": ".143",
+                    "number": "17",
+                    "player": "Matt Holliday",
+                    "position": "DH"
+                },
+                {
+                    "BattingAvg": "0",
+                    "number": "52",
+                    "player": "CC Sabathia",
+                    "position": "Pitcher"
+                },
+                {
+                    "BattingAvg": "0",
+                    "number": "19",
+                    "player": "Masahiro Tanaka",
+                    "position": "Pitcher"
+                }
+            ]
+        }
+    ]
+}
