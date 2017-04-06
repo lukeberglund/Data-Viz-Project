@@ -211,7 +211,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
@@ -224,12 +224,17 @@
 	console.log(data);	
     	var player = []; 
 		
-    	$.each(data.Yankees, function (index, position) {
+    	$.each(data.Yankees, function (index, Yankees) {
 	console.log( index + ": " + position );
-        player.push(Yankees.player); });
+        player.push(Yankees.player); 
+	player.push(Yankees.position);
+		});
     	console.log(player); 
 	document.getElementById('playerNames').innerHTML = player;
-	
+		
+	$(document).ready(function() {
+    	var playerTable = makeTable($(document.body), player);
+		});	
 		
 	var newHTML = [];
 	$.each(player, function(index, value) {
@@ -239,9 +244,22 @@
 		console.log(newHTML);
 		
 	var result = player.map(function(a) {return a.player;});	
-		
+	console.log(result);
 	});	
-	
+		
+	function makeTable(container, data) {
+    		var table = $("<table/>").addClass('CSSTableGenerator');
+    		$.each(data, function(rowIndex, r) {
+        	var row = $("<tr/>");
+        	$.each(r, function(colIndex, c) { 
+            	row.append($("<t"+(rowIndex == 0 ?  "h" : "d")+"/>").text(c));
+        	});
+        table.append(row);
+    });
+    return container.append(table);
+}	
+		
+		
 	/*$.getJSON(url, function(json) {
   	console.log("GOT SOME DATA:", json)
   	});*/
