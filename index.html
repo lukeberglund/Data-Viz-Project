@@ -191,7 +191,7 @@
 	    <div id="in-field-grass" class="mowed-grass"></div>
 	    <div id="batting-circle"></div>
 	    <div id="first-base" class="base">
-		  <button id="base1" type="button" name="button" onclick="makeTable(container, data)">First Base Players</button>
+		  <button id="base1" type="button" name="button" onclick="makeTable(data)">First Base Players</button>
 	    </div>
 	    <div id="second-base" class="base"></div>
 	    <div id="third-base" class="base"></div>
@@ -211,7 +211,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
@@ -226,39 +226,12 @@
 	var firstPlayers = "First Base";
 		
     	$.each(data.Yankees, function (index, Yankees) {
-	console.log( index + ": " + Yankees.position );
+	console.log( index + ": " + Yankees.player + Yankees.position );
         player.push(Yankees.player); 
 	player.push(Yankees.position);
 		});
     	console.log(player); 
 	document.getElementById('playerNames').innerHTML = player;
-		
-	$(document).ready(function() {
-    	var playerTable = makeTable($(document.body), player);
-		});	
-		
-	var newHTML = [];
-	$.each(player, function(index, value) {
-    	newHTML.push('<span>' + value + '</span>'); 
-		});
-		$(".element").html(newHTML.join(""));	
-		console.log(newHTML);
-		
-	var result = player.map(function(a) {return a.player;});	
-	console.log(result);
-	});	
-		
-	function makeTable(container, data) {
-    		var table = $("<table/>").addClass('CSSTableGenerator');
-    		$.each(data, function(rowIndex, r) {
-        	var row = $("<tr/>");
-        	$.each(r, function(colIndex, c) { 
-            	row.append($("<t"+(rowIndex == 0 ?  "h" : "d")+"/>").text(c));
-        	});
-        table.append(row);
-    });
-    return container.append(table);
-}	
 		
 		
 	/*$.getJSON(url, function(json) {
