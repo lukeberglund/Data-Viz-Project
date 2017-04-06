@@ -211,7 +211,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
@@ -225,6 +225,7 @@
     	var player = []; 
 		
     	$.each(data.Yankees, function (index, Yankees) {
+	console.log( index + ": " + Yankees );
         player.push(Yankees.player); });
     	console.log(player); 
 	document.getElementById('playerNames').innerHTML = player;
@@ -236,7 +237,7 @@
 		$(".element").html(newHTML.join(""));	
 		console.log(newHTML);
 		
-	var result = data.map(function(a) {return a.player;});	
+	var result = player.map(function(a) {return a.player;});	
 		
 	});	
 	
