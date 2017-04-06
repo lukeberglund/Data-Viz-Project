@@ -211,7 +211,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "fb"></p>
@@ -221,24 +221,27 @@
 	</div>
 
 	<script>	
-		
-	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
-	$.getJSON( url, function( data ) {
-    	console.log('loaded');
-	console.log(data);	
-    	var player = []; 
+	var player = []; 
 	var firstBase = [];
-	var secondBase = [];	
-    	$.each(data.Yankees, function (index, Yankees) {
-	console.log( index + ": " + Yankees.player + Yankees.position ); 
-	player.push(Yankees.player);
+	var secondBase = [];
+	var thirdBase = [];
+	var pitcher = [];
+	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
+	
+	$.getJSON( url, function( data ) {
+    		console.log('loaded');
+		console.log(data);	
+
+    		$.each(data.Yankees, function (index, Yankees) {
+			console.log( index + ": " + Yankees.player + Yankees.position ); 
+			player.push(Yankees.player);
 		});
-	firstBase.push(player[1]);
-	secondBase.push(player[2]);
-	console.log(firstBase);
-    	console.log(player); 
-	document.getElementById('fb').innerHTML = firstBase;
-	document.getElementById('sb').innerHTML = secondBase;
+		firstBase.push(player[1]);
+		secondBase.push(player[2]);
+		console.log(firstBase);
+    		console.log(player); 
+		document.getElementById('fb').innerHTML = firstBase;
+		document.getElementById('sb').innerHTML = player[2];
 	});
 		
 	/*$.getJSON(url, function(json) {
