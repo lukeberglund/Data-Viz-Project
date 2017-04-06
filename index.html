@@ -246,7 +246,7 @@
         player.push(Yankees.player); });
     	console.log(player); 
 	document.getElementById('playerNames').innerHTML = player;
-	var result = player.map(function(a) {return a.player;});
+	var result = _.map(player, 'player');
 	console(result);
 	});   
 		
