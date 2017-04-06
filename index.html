@@ -171,15 +171,35 @@
 	  bottom:10px;
 	  right:10px;
 	}
-	#firstbaseplayers{
+	#firstBase{
 	  position:absolute;
-    	  top: 475px;
-    	  left: 780px;
+    	  top: 465px;
+    	  left: 760px;
 	}
-	#secondBaseplayers{
+	#secondBase{
 	  position:absolute;
     	    top: 275px;
     	    left: 500px;
+	}
+	#thirdBase{
+	  position:absolute;
+    	  top: 450px;
+    	  left: 275px;
+	}
+	#pitchersMound{
+	  position:absolute;
+	  top:410px;
+	  left:450px;
+	}
+	#shortstop{
+	  position:absolute;
+    	  top: 300px;
+    	  left: 460px;
+	}
+	#leftField{
+	  position:absolute;
+    	  top: 350px;
+    	  left: 265px;
 	}
 	 </style>
 </head>
@@ -211,21 +231,33 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
-	<div id="firstbaseplayers">
+	<div id="firstBase">
 	  <p id= "fb"></p>
 	</div>
-	<div id="secondBaseplayers">
+	<div id="secondBase">
 	  <p id= "sb"></p>
 	</div>
-
+	<div id="thirdBase">
+	  <p id= "tb"></p>
+	</div>
+	<div id="pitchersMound">
+	  <p id= "pm"></p>
+	</div>	
+	 <div id="shortstop">
+	  <p id= "ss"></p>
+	</div>
+	<div id="leftField">
+	  <p id= "lf"></p>
+	</div>
+	  
+	  
+	  
+	  
 	<script>	
 	var player = []; 
-	var firstBase = [];
-	var secondBase = [];
-	var thirdBase = [];
-	var pitcher = [];
+
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
 	
 	$.getJSON( url, function( data ) {
@@ -236,12 +268,16 @@
 			console.log( index + ": " + Yankees.player + Yankees.position ); 
 			player.push(Yankees.player);
 		});
-		firstBase.push(player[1]);
+		/*firstBase.push(player[1]);
 		secondBase.push(player[2]);
-		console.log(firstBase);
+		*/
     		console.log(player); 
-		document.getElementById('fb').innerHTML = firstBase;
+		document.getElementById('fb').innerHTML = player[1];
 		document.getElementById('sb').innerHTML = player[2];
+		document.getElementById('tb').innerHTML = player[3];
+		document.getElementById('ss').innerHTML = player[4];
+		document.getElementById('lf').innerHTML = player[5];
+		document.getElementById('lf').innerHTML = player[9];
 	});
 		
 	/*$.getJSON(url, function(json) {
