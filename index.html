@@ -176,18 +176,18 @@
     	    top: 475px;
     	    left: 750px;
 	}
-	#table {
+	table {
 		counter-reset: rowNumber;
 		}
-	#table tr {
+	table tr {
 		counter-increment: rowNumber;
 		}
-	#table tr td:first-child::before {
+	table tr td:first-child::before {
 		content: counter(rowNumber);
 		margin-right: 0.5em;
 		}
 
-	#p1 {
+	p1 {
 		font-style: italic;
 		font-size: 20px;
 		}
@@ -225,19 +225,19 @@
 	<div id="wrapper">
 		<table align='right' class="table table-bordered table-hover"  id="data_table">
 		<tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>Descripion</th>
+			<th>Player Name</th>
+			<th>Number</th>
+			<th>Batting Average</th>
 			<th>Level of Effort</th>
 			<th>Priority</th>
 			<th>Status</th>
 		</tr>	
 		</table>
-		
+	  </div>
 	<script>	
 		
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
-	$.getJSON( url, function( data ) {
+	$.getJSON( url, function( player,data ) {
     	console.log('loaded');
 		
     	var player = []; 
