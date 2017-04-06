@@ -185,7 +185,7 @@
 	    <div id="in-field-grass" class="mowed-grass"></div>
 	    <div id="batting-circle"></div>
 	    <div id="first-base" class="base">
-		  <button id="base1" type="button" name="button">First Base Players</button>
+		  <button id="base1" type="button" name="button" onclick="getfirst()">First Base Players</button>
 	    </div>
 	    <div id="second-base" class="base"></div>
 	    <div id="third-base" class="base"></div>
@@ -201,7 +201,7 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
@@ -220,9 +220,9 @@
     	console.log(player); 
 	});
 		
-	document.getElementById("base1").addEventListener("click", getfirst() {
+	getfirst() {
     	$('playerNames')[0].innerHTML = player;
-	}, true);
+	}
 		
 	document.getElementById("base1").addEventListener("click", getfirst() {
     	document.getElementById('playerNames').innerHTML = player;
