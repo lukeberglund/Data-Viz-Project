@@ -207,11 +207,11 @@
 	</div>
 	  
 	<div id ="thePlayers">
-		<a data-player="player">Add Players </a>
+		<a onclick="showState()" id="YankeesRoster">Team </a>
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
@@ -221,14 +221,13 @@
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
 	$.getJSON( url, function( data ) {
     	console.log('loaded');
-		
+	console.log(data);	
     	var player = []; 
 		
     	$.each(data.Yankees, function (index, Yankees) {
         player.push(Yankees.player); });
     	console.log(player); 
 	document.getElementById('playerNames').innerHTML = player;
-	console.log( $( player ).get('player') );
 		
 	var newHTML = [];
 	$.each(player, function(index, value) {
@@ -236,17 +235,14 @@
 		});
 		$(".element").html(newHTML.join(""));	
 		console.log(newHTML);
-	});
-	document.getElementById("third-base").addEventListener("click", function() {
-    	alert("You clicked third base");
-	}, true);
-		
-	$(document).ready(function() {
-    $("a[data-player]").click(function() {
-        openbox_state( $(this).attr("data-player") );
+	});	
+	
+$(document).ready(function(){
+    $('input[position=First Base]').click(function() {
+       var selector = $(this).data('position');
+	console.log(selector);
     });
 });
-		
 	/*$.getJSON(url, function(json) {
   	console.log("GOT SOME DATA:", json)
   	});*/
