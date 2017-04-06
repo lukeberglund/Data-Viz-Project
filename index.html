@@ -176,21 +176,6 @@
     	    top: 475px;
     	    left: 750px;
 	}
-	table {
-		counter-reset: rowNumber;
-		}
-	table tr {
-		counter-increment: rowNumber;
-		}
-	table tr td:first-child::before {
-		content: counter(rowNumber);
-		margin-right: 0.5em;
-		}
-
-	p1 {
-		font-style: italic;
-		font-size: 20px;
-		}
 	 </style>
 </head>
   <body>
@@ -217,20 +202,11 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
 	</div>
-	<div id="wrapper">
-		<table align='right' class="table table-bordered table-hover"  id="data_table">
-		<tr>
-			<th>Player Name</th>
-			<th>Number</th>
-			<th>Batting Average</th>
-		</tr>	
-		</table>
-	  </div>
 	<script>	
 		
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
@@ -244,7 +220,13 @@
     	console.log(player); 
 	document.getElementById('playerNames').innerHTML = player;
 	console.log( $( player ).get('player') );
-	});   
+		
+	var newHTML = [];
+	$.each(player, function(index, value) {
+    	newHTML.push('<span>' + value + '</span>'); 
+		});
+		$(".element").html(newHTML.join(""));	
+	});
 	document.getElementById("third-base").addEventListener("click", function() {
     	alert("You clicked third base");
 	}, true);
