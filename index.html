@@ -217,7 +217,7 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
@@ -237,7 +237,7 @@
 	<script>	
 		
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
-	$.getJSON( url, function( player,data ) {
+	$.getJSON( url, function( player ) {
     	console.log('loaded');
 		
     	var player = []; 
@@ -246,6 +246,8 @@
         player.push(Yankees.player); });
     	console.log(player); 
 	document.getElementById('playerNames').innerHTML = player;
+	var result = player.map(function(a) {return a.player;});
+	console(result);
 	});   
 		
 	document.getElementById("third-base").addEventListener("click", function() {
