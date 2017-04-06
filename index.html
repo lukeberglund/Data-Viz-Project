@@ -33,14 +33,7 @@
 	    height: 670px;
 	    width: 670px;
 	    border-left: 2px solid white;
-	    border-bottom: 2px solid white;$.getJSON( "ajax/test.json", function( data ) {
-    console.log('loaded');
-    var departement = []; // create array here
-    $.each(data.personnes, function (index, personne) {
-        departement.push(personne.departement); //push values here
-    });
-    console.log(departement); // see the output here
-});
+	    border-bottom: 2px solid white;
 	}
 	#in-field-grass{
 	    position:absolute;
@@ -177,6 +170,11 @@
 	  bottom:10px;
 	  right:10px;
 	}
+	#firstbaseplayers{
+	  position:absolute;
+    	    top: 475px;
+    	    left: 750px;
+	}
 	 </style>
 </head>
   <body>
@@ -187,7 +185,7 @@
 	    <div id="in-field-grass" class="mowed-grass"></div>
 	    <div id="batting-circle"></div>
 	    <div id="first-base" class="base">
-		  <p id="base1">First Base</p>
+		  <button id="base1" type="button" name="button">First Base Players</button>
 	    </div>
 	    <div id="second-base" class="base"></div>
 	    <div id="third-base" class="base"></div>
@@ -203,19 +201,41 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
-	  <p id="aBox" onlick=doThis()>"Hello World"</p>		 
+	<div id="firstbaseplayers">
+	  <p id= "playerNames"></p>
+	</div>
+	  
+			 
 	<script>
-	document.getElementById("first-base").addEventListener("click", function() {
-    	alert("You clicked first base");
+		
+	$.getJSON( url, function( data ) {
+    	console.log('loaded');
+		
+    	var player = []; 
+		
+    	$.each(data.Yankees, function (index, Yankees) {
+        player.push(Yankees.player); });
+    	console.log(player); 
+	});
+		
+	document.getElementById("base1").addEventListener("click", getfirst() {
+    	$('playerNames')[0].innerHTML = player;
 	}, true);
+		
+	document.getElementById("base1").addEventListener("click", getfirst() {
+    	document.getElementById('playerNames').innerHTML = player;
+	}, true);
+		
 	document.getElementById("third-base").addEventListener("click", function() {
     	alert("You clicked third base");
 	}, true);
-	
-	var myData
-	var myResponse
+		
+		
+	document.getElementById("third-base").addEventListener("click", function() {	
+		
+		
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
 
 	/*$.getJSON(url, function(json) {
@@ -227,14 +247,7 @@
       console.log(name + '=' + value);
    });
 });*/
-$.getJSON( url, function( data ) {
-    console.log('loaded');
-    var player = []; 
-    $.each(data.Yankees, function (index, Yankees) {
-        player.push(Yankees.player); 
-    });
-    console.log(player); 
-});
+
 	  </script>
   </body>
 </html>
