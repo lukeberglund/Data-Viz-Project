@@ -173,8 +173,13 @@
 	}
 	#firstbaseplayers{
 	  position:absolute;
-    	    top: 475px;
-    	    left: 750px;
+    	  top: 475px;
+    	  left: 780px;
+	}
+	#thePlayers{
+	  position:absolute;
+    	  top: 400px;
+    	  left: 780px;
 	}
 	 </style>
 </head>
@@ -200,9 +205,13 @@
 	    <div id="batters-box-right" class="batters-box"></div>
 	    <div id="batters-box-left" class="batters-box"></div>
 	</div>
-
+	  
+	<div id ="thePlayers">
+		<a data-player="player">Add Players </a>
+	</div>
+	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
@@ -231,6 +240,12 @@
 	document.getElementById("third-base").addEventListener("click", function() {
     	alert("You clicked third base");
 	}, true);
+		
+	$(document).ready(function() {
+    $("a[data-player]").click(function() {
+        openbox_state( $(this).attr("data-player") );
+    });
+});
 		
 	/*$.getJSON(url, function(json) {
   	console.log("GOT SOME DATA:", json)
