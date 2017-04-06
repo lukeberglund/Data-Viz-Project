@@ -10,7 +10,7 @@
             top: px;
 	    left: 165px;
 	    height: 630px;
-	    width: 680px;
+	    width: 670px;
 	    border-radius: 1% 100% 1% 1%;
 	    border: 1px solid green;
 	    background-color: green;
@@ -34,6 +34,7 @@
 	    width: 670px;
 	    border-left: 2px solid white;
 	    border-bottom: 2px solid white;
+	    transform: rotate(315deg);
 	}
 	#in-field-grass{
 	    position:absolute;
@@ -175,6 +176,21 @@
     	    top: 475px;
     	    left: 750px;
 	}
+	#table {
+		counter-reset: rowNumber;
+		}
+	#table tr {
+		counter-increment: rowNumber;
+		}
+	#table tr td:first-child::before {
+		content: counter(rowNumber);
+		margin-right: 0.5em;
+		}
+
+	#p1 {
+		font-style: italic;
+		font-size: 20px;
+		}
 	 </style>
 </head>
   <body>
@@ -201,14 +217,25 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
 	</div>
-	  
-			 
+	<div id="wrapper">
+		<table align='right' class="table table-bordered table-hover"  id="data_table">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Descripion</th>
+			<th>Level of Effort</th>
+			<th>Priority</th>
+			<th>Status</th>
+		</tr>	
+		</table>
+		
 	<script>	
+		
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
 	$.getJSON( url, function( data ) {
     	console.log('loaded');
@@ -218,12 +245,8 @@
     	$.each(data.Yankees, function (index, Yankees) {
         player.push(Yankees.player); });
     	console.log(player); 
-	$('playerNames')[0].innerHTML = player;
+	document.getElementById('playerNames').innerHTML = player;
 	});   
-		
-	document.getElementById("base1").addEventListener("click", function() {
-    	document.getElementById('playerNames').innerHTML = player;
-	}, true);
 		
 	document.getElementById("third-base").addEventListener("click", function() {
     	alert("You clicked third base");
