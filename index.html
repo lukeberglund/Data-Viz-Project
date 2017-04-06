@@ -211,7 +211,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
@@ -235,14 +235,11 @@
 		});
 		$(".element").html(newHTML.join(""));	
 		console.log(newHTML);
+		
+	var result = data.map(function(a) {return a.player;});	
+		
 	});	
 	
-$(document).ready(function(){
-    $('input[position=First Base]').click(function() {
-       var selector = $(this).data('position');
-	console.log(selector);
-    });
-});
 	/*$.getJSON(url, function(json) {
   	console.log("GOT SOME DATA:", json)
   	});*/
