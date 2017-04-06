@@ -217,7 +217,7 @@
 	</div>
 
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	<div id="firstbaseplayers">
 	  <p id= "playerNames"></p>
@@ -246,7 +246,7 @@
         player.push(Yankees.player); });
     	console.log(player); 
 	document.getElementById('playerNames').innerHTML = player;
-	console.log( $( player ).get() );
+	console.log( $( player ).get("player") );
 	});   
 	document.getElementById("third-base").addEventListener("click", function() {
     	alert("You clicked third base");
