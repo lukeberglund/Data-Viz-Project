@@ -174,7 +174,7 @@
 	#firstBase{
 	  position:absolute;
     	  top: 465px;
-    	  left: 760px;
+    	  left: 750px;
 	}
 	#secondBase{
 	  position:absolute;
@@ -188,18 +188,18 @@
 	}
 	#pitchersMound{
 	  position:absolute;
-	  top:445px;
+	  top:450px;
 	  left:480px;
 	}
 	#shortstop{
 	  position:absolute;
-    	  top: 315px;
-    	  left: 380px;
+    	  top: 320px;
+    	  left: 370px;
 	}
 	#leftFf{
 	  position:absolute;
     	  top: 300px;
-    	  left: 220px;
+    	  left: 200px;
 	}
 	#centerField{
 	  position:absolute;
@@ -213,8 +213,8 @@
 	}
 	#desHit{
 	  position:absolute;
-    	  top: 735px;
-    	  left: 465px;
+    	  top: 730px;
+    	  left: 455px;
 	}
 	#catcher{
 	  position:absolute;
@@ -299,7 +299,7 @@
 
     		$.each(data.Yankees, function (index, Yankees) {
 			console.log( index + ": " + Yankees.player + Yankees.position ); 
-			player.push(Yankees.player);
+			player.push(Yankees.number + " " + Yankees.player);
 		});
 		/*firstBase.push(player[1]);
 		secondBase.push(player[2]);
