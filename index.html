@@ -198,12 +198,12 @@
 	}
 	#leftFf{
 	  position:absolute;
-    	  top: 310px;
-    	  left: 235px;
+    	  top: 300px;
+    	  left: 220px;
 	}
 	#centerField{
 	  position:absolute;
-    	  top: 200px;
+    	  top: 190px;
     	  left: 500px;
 	}
 	#rightField{
@@ -212,6 +212,11 @@
     	  left: 755px;
 	}
 	#desHit{
+	  position:absolute;
+    	  top: 735px;
+    	  left: 465px;
+	}
+	#catcher{
 	  position:absolute;
     	  top: 745px;
     	  left: 480px;
@@ -250,7 +255,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstBase">
 	  <p id= "fb"></p>
@@ -279,7 +284,9 @@
 	<div id="desHit">
 	  <p id= "dh"></p>
 	</div>
-	  
+	<div id="catcher">
+	  <p id= "c"></p>
+	</div>  
 	  
 	<script>	
 	var player = []; 
@@ -298,6 +305,7 @@
 		secondBase.push(player[2]);
 		*/
     		console.log(player); 
+		document.getElementById('c').innerHTML = player[0];
 		document.getElementById('fb').innerHTML = player[1];
 		document.getElementById('sb').innerHTML = player[2];
 		document.getElementById('tb').innerHTML = player[3];
@@ -307,7 +315,7 @@
 		document.getElementById('rf').innerHTML = player[7];
 		document.getElementById('dh').innerHTML = player[8];
 		document.getElementById('pm').innerHTML = player[9];
-
+		
 	});
 	  </script>
   </body>
