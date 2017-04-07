@@ -59,12 +59,68 @@
                     "number": "52",
                     "player": "CC Sabathia",
                     "position": "Pitcher"
+                }
+            ],
+                        "Mets": [
+                {
+                    "BattingAvg": ".333",
+                    "number": "18",
+                    "player": "Travis d'Arnaud",
+                    "position": "Catcher"
+                },
+                {
+                    "BattingAvg": ".143",
+                    "number": "21",
+                    "player": "Lucas Duda",
+                    "position": "First Base"
+                },
+                {
+                    "BattingAvg": ".182",
+                    "number": "20",
+                    "player": "Neil Walker",
+                    "position": "Second Base"
+                },
+                {
+                    "BattingAvg": ".000",
+                    "number": "7",
+                    "player": "Jose Reyes",
+                    "position": "Third Base"
+                },
+                {
+                    "BattingAvg": ".250",
+                    "number": "13",
+                    "player": "Asdrubal Cabrera",
+                    "position": "Short Stop"
+                },
+                {
+                    "BattingAvg": ".200",
+                    "number": "52",
+                    "player": "Yoenis Cespedes",
+                    "position": "Left Field"
+                },
+                {
+                    "BattingAvg": ".182",
+                    "number": "3",
+                    "player": "Curtis Granderson",
+                    "position": "Center Field"
+                },
+                {
+                    "BattingAvg": ".375",
+                    "number": "19",
+                    "player": "Jay Bruce",
+                    "position": "Right Field"
+                },
+                {
+                    "BattingAvg": ".143",
+                    "number": "17",
+                    "player": "Matt Holliday",
+                    "position": "DH"
                 },
                 {
                     "BattingAvg": "0",
-                    "number": "19",
-                    "player": "Masahiro Tanaka",
+                    "number": "48",
+                    "player": "Jacob deGrom",
                     "position": "Pitcher"
-                }
+                },
             ]
 }
