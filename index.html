@@ -239,6 +239,11 @@
     	  left: 480px;
 	  font-family: Impact, Charcoal, sans-serif;
 	}
+	#playerStats{
+	  position:absolute;
+    	  top: 745px;
+    	  left: 580px;
+	  font-family: Impact, Charcoal, sans-serif;
 	 </style>
 </head>
   <body>
@@ -249,7 +254,7 @@
 	    <div id="batting-circle"></div>
 	    <div id="first-base" class="base"></div>
 	    <div id="second-base" class="base"></div>
-	    <div id="third-base" class="base"></div>
+	    <div id="third-base" class="base" onclick="setPlayer()"></div>
 	    <div id="home-plate"></div>
 	    <div id="base-lines"></div>
 	    <div id="pitchers-mound"></div>
@@ -262,7 +267,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	<div id="firstBase" onclick= "popTable()">
 	  <p id= "fb"></p>
@@ -294,6 +299,11 @@
 	<div id="catcher">
 	  <p id= "cc"></p>
 	</div>  
+	<div id = "playerStats">
+		<p id="ps"></p>
+	</div>
+	  
+	  
 	  
 	<script>	
 	var player = []; 
@@ -321,6 +331,13 @@
 			});
 			
 		});
+		
+		
+		function setPlayer(){
+			document.getElementById('ps').innerHTML = curPlayer[0];
+		};
+		
+		
 		/*firstBase.push(player[1]);
 		secondBase.push(player[2]);
 		*/
