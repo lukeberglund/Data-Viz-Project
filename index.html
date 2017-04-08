@@ -262,7 +262,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
 	</div>
 	<div id="firstBase" onclick= "popTable()">
 	  <p id= "fb"></p>
@@ -298,6 +298,8 @@
 	<script>	
 	var player = []; 
 	var curPlayer = [];
+	var nxtCurPlayer = [];
+		
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
 	
 	$.getJSON( url, function( data ) {
@@ -311,12 +313,23 @@
 			curPlayer.push(Yankees.player);
 			curPlayer.push(Yankees.position);
 			curPlayer.push(Yankees.BattingAvg);
+			nxtCurPlayer.push( {
+				Player: $( this ).data( 'player' ),
+				position: $( this ).data( 'position' ),
+				number: $( this ).data( 'number' ),
+				BattingAvg: $( this ).data( 'BattingAvg' )
+			});
+			
 		});
 		/*firstBase.push(player[1]);
 		secondBase.push(player[2]);
 		*/
+		
+		
+		
     		console.log(player); 
 		console.log(curPlayer);
+		console.log(nxtCurPlayer);
 		document.getElementById('cc').innerHTML = player[0];
 		document.getElementById('fb').innerHTML = player[1];
 		document.getElementById('sb').innerHTML = player[2];
