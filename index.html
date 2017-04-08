@@ -262,7 +262,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstBase" onclick= "popTable()">
 	  <p id= "fb"></p>
@@ -314,10 +314,10 @@
 			curPlayer.push(Yankees.position);
 			curPlayer.push(Yankees.BattingAvg);
 			nxtCurPlayer.push( {
-				Player: $( this ).data( 'player' ),
-				position: $( this ).data( 'position' ),
-				number: $( this ).data( 'number' ),
-				BattingAvg: $( this ).data( 'BattingAvg' )
+				Player: Yankees.player,
+				position: Yankees.position,
+				number: Yankees.number,
+				BattingAvg: Yankees.BattingAvg
 			});
 			
 		});
