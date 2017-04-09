@@ -248,12 +248,10 @@
 </head>
   <body>
 	  
-	 <div id ='sTeam'>
-    		<select id ="selTeam">
-		      <option value ="0">Yankees</option>
-		      <option value ="1">Mets</option>
-    		</select>
-	</div> 
+    	<select id ="selTeam">
+		<option value ="0">Yankees</option>
+		<option value ="1">Mets</option>
+    	</select>
 	  
 	<div id="stadium">
 	    <div id="field" class="mowed-grass"></div>
@@ -275,7 +273,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstBase">
 	  <p id= "fb"></p>
@@ -318,6 +316,9 @@
 	var curPlayer = [];
 	var nxtCurPlayer = [];
 		
+	var curTeam = document.getElementById("selTeam");
+	curTeam.addEventListener("change", changeTeam, false)	
+		
 	var url = "https://raw.githubusercontent.com/LukeBerglund/Data-Viz-Project/master/data/YankeesPlayers.json"
 	
 	$.getJSON( url, function( data ) {
@@ -354,7 +355,7 @@
 			alert(curPlayer[0].BattingAvg);
 		}
 		
-		$("selTeam").on('change', function(){
+		function changeTeam{
     			if ($(this).val() == '0')
     			{			
 				document.getElementById('cc').innerHTML = player[0];
