@@ -122,6 +122,68 @@
                     "player": "Jacob deGrom",
                     "position": "Pitcher"
                 }
+            ],
+            "Red Sox": [
+                {
+                    "BattingAvg": ".417",
+                    "number": "3",
+                    "player": "Sandy Leon",
+                    "position": "Catcher"
+                },
+                {
+                    "BattingAvg": ".222",
+                    "number": "18",
+                    "player": "Mitch Moreland",
+                    "position": "First Base"
+                },
+                {
+                    "BattingAvg": ".313",
+                    "number": "15",
+                    "player": "Dustin Pedroi",
+                    "position": "Second Base"
+                },
+                {
+                    "BattingAvg": ".188",
+                    "number": "48",
+                    "player": "Pablo Sandova",
+                    "position": "Third Base"
+                },
+                {
+                    "BattingAvg": ".222",
+                    "number": "2",
+                    "player": "Xander Bogaerts",
+                    "position": "Short Stop"
+                },
+                {
+                    "BattingAvg": ".333",
+                    "number": "16",
+                    "player": "Andrew Benintendi",
+                    "position": "Left Field"
+                },
+                {
+                    "BattingAvg": ".286",
+                    "number": "19",
+                    "player": "Jackie Bradley Jr.",
+                    "position": "Center Field"
+                },
+                {
+                    "BattingAvg": ".333",
+                    "number": "50",
+                    "player": "Mookie Betts",
+                    "position": "Right Field"
+                },
+                {
+                    "BattingAvg": ".250",
+                    "number": "13",
+                    "player": "Hanley Ramirez",
+                    "position": "DH"
+                },
+                {
+                    "BattingAvg": ".000",
+                    "number": "22",
+                    "player": "Rick Porcello",
+                    "position": "Pitcher"
+                }
             ]
 }
 
