@@ -327,12 +327,6 @@
     		$.each(data.Yankees, function (index, Yankees) {
 			console.log( index + ": " + Yankees.player + Yankees.position ); 
 			player.push(Yankees.player);
-			/*
-			curPlayer.push(Yankees.number);
-			curPlayer.push(Yankees.player);
-			curPlayer.push(Yankees.position);
-			curPlayer.push(Yankees.BattingAvg);
-			*/
 			nxtCurPlayer.push( {
 				Player: Yankees.player,
 				position: Yankees.position,
@@ -342,23 +336,17 @@
 			
 		});
 		
-		
 		$.each(data.Mets, function (index, Mets) {
 			console.log( index + ": " + Mets.player + Mets.position ); 
 			curPlayer.push(Mets.player);
 		});
-		
 		
 		function setPlayer(){
 			document.getElementById('ps').innerHTML = curPlayer[0].player;
 			alert(curPlayer[0].BattingAvg);
 		}
 	
-								
-		/*
-    		console.log(player); 
-		console.log(curPlayer);
-		console.log(nxtCurPlayer);
+		document.getElementById('teamHeader').innerHTML =  "New York Yankees 2017 Depth Chart"				
 		document.getElementById('cc').innerHTML = player[0];
 		document.getElementById('fb').innerHTML = player[1];
 		document.getElementById('sb').innerHTML = player[2];
@@ -369,7 +357,6 @@
 		document.getElementById('rf').innerHTML = player[7];
 		document.getElementById('dh').innerHTML = player[8];
 		document.getElementById('pm').innerHTML = player[9];
-		*/
 		
 	});
 	function changeTeam()
