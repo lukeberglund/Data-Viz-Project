@@ -309,12 +309,10 @@
 		<p id="ps"></p>
 	</div>
 	  
-	  
-	  
 	<script>	
-	var player = []; 
-	var curPlayer = [];
-	var nxtCurPlayer = [];
+	var yPlayer = []; 
+	var mPlayer = [];
+	var rPlayer = [];
 		
 	document.getElementById("selTeam").addEventListener("change", changeTeam);	
 		
@@ -326,20 +324,19 @@
 
     		$.each(data.Yankees, function (index, Yankees) {
 			console.log( index + ": " + Yankees.player + Yankees.position ); 
-			player.push(Yankees.player);
-			nxtCurPlayer.push( {
-				Player: Yankees.player,
-				position: Yankees.position,
-				number: Yankees.number,
-				BattingAvg: Yankees.BattingAvg
-			});
-			
+			yPlayer.push(Yankees.player);
 		});
 		
 		$.each(data.Mets, function (index, Mets) {
 			console.log( index + ": " + Mets.player + Mets.position ); 
-			curPlayer.push(Mets.player);
+			mPlayer.push(Mets.player);
 		});
+		
+		$.each(data.RedSox, function (index, RedSox) {
+			console.log( index + ": " + RedSox.player + RedSox.position ); 
+			rPlayer.push(RedSox.player);
+		});
+		
 		
 		function setPlayer(){
 			document.getElementById('ps').innerHTML = curPlayer[0].player;
@@ -347,45 +344,58 @@
 		}
 	
 		document.getElementById('teamHeader').innerHTML =  "New York Yankees 2017 Depth Chart"				
-		document.getElementById('cc').innerHTML = player[0];
-		document.getElementById('fb').innerHTML = player[1];
-		document.getElementById('sb').innerHTML = player[2];
-		document.getElementById('tb').innerHTML = player[3];
-		document.getElementById('ss').innerHTML = player[4];
-		document.getElementById('lf').innerHTML = player[5];
-		document.getElementById('cf').innerHTML = player[6];
-		document.getElementById('rf').innerHTML = player[7];
-		document.getElementById('dh').innerHTML = player[8];
-		document.getElementById('pm').innerHTML = player[9];
+		document.getElementById('cc').innerHTML = yPlayer[0];
+		document.getElementById('fb').innerHTML = yPlayer[1];
+		document.getElementById('sb').innerHTML = yPlayer[2];
+		document.getElementById('tb').innerHTML = yPlayer[3];
+		document.getElementById('ss').innerHTML = yPlayer[4];
+		document.getElementById('lf').innerHTML = yPlayer[5];
+		document.getElementById('cf').innerHTML = yPlayer[6];
+		document.getElementById('rf').innerHTML = yPlayer[7];
+		document.getElementById('dh').innerHTML = yPlayer[8];
+		document.getElementById('pm').innerHTML = yPlayer[9];
 		
 	});
 	function changeTeam()
 		{
     			if ($(this).val() == '0')
     			{	document.getElementById('teamHeader').innerHTML =  "New York Yankees 2017 Depth Chart"		
-				document.getElementById('cc').innerHTML = player[0];
-				document.getElementById('fb').innerHTML = player[1];
-				document.getElementById('sb').innerHTML = player[2];
-				document.getElementById('tb').innerHTML = player[3];
-				document.getElementById('ss').innerHTML = player[4];
-				document.getElementById('lf').innerHTML = player[5];
-				document.getElementById('cf').innerHTML = player[6];
-				document.getElementById('rf').innerHTML = player[7];
-				document.getElementById('dh').innerHTML = player[8];
-				document.getElementById('pm').innerHTML = player[9];
+				document.getElementById('cc').innerHTML = yPlayer[0];
+				document.getElementById('fb').innerHTML = yPlayer[1];
+				document.getElementById('sb').innerHTML = yPlayer[2];
+				document.getElementById('tb').innerHTML = yPlayer[3];
+				document.getElementById('ss').innerHTML = yPlayer[4];
+				document.getElementById('lf').innerHTML = yPlayer[5];
+				document.getElementById('cf').innerHTML = yPlayer[6];
+				document.getElementById('rf').innerHTML = yPlayer[7];
+				document.getElementById('dh').innerHTML = yPlayer[8];
+				document.getElementById('pm').innerHTML = yPlayer[9];
 			}
 			if ($(this).val() == '1')
 			{	document.getElementById('teamHeader').innerHTML =  "New York Mets 2017 Depth Chart"
-				document.getElementById('cc').innerHTML = curPlayer[0];
-				document.getElementById('fb').innerHTML = curPlayer[1];
-				document.getElementById('sb').innerHTML = curPlayer[2];
-				document.getElementById('tb').innerHTML = curPlayer[3];
-				document.getElementById('ss').innerHTML = curPlayer[4];
-				document.getElementById('lf').innerHTML = curPlayer[5];
-				document.getElementById('cf').innerHTML = curPlayer[6];
-				document.getElementById('rf').innerHTML = curPlayer[7];
-				document.getElementById('dh').innerHTML = curPlayer[8];
-				document.getElementById('pm').innerHTML = curPlayer[9];
+				document.getElementById('cc').innerHTML = mPlayer[0];
+				document.getElementById('fb').innerHTML = mPlayer[1];
+				document.getElementById('sb').innerHTML = mPlayer[2];
+				document.getElementById('tb').innerHTML = mPlayer[3];
+				document.getElementById('ss').innerHTML = mPlayer[4];
+				document.getElementById('lf').innerHTML = mPlayer[5];
+				document.getElementById('cf').innerHTML = mPlayer[6];
+				document.getElementById('rf').innerHTML = mPlayer[7];
+				document.getElementById('dh').innerHTML = mPlayer[8];
+				document.getElementById('pm').innerHTML = mPlayer[9];
+			}
+			if ($(this).val() == '1')
+			{	document.getElementById('teamHeader').innerHTML =  "New York Mets 2017 Depth Chart"
+				document.getElementById('cc').innerHTML = rPlayer[0];
+				document.getElementById('fb').innerHTML = rPlayer[1];
+				document.getElementById('sb').innerHTML = rPlayer[2];
+				document.getElementById('tb').innerHTML = rPlayer[3];
+				document.getElementById('ss').innerHTML = rPlayer[4];
+				document.getElementById('lf').innerHTML = rPlayer[5];
+				document.getElementById('cf').innerHTML = rPlayer[6];
+				document.getElementById('rf').innerHTML = rPlayer[7];
+				document.getElementById('dh').innerHTML = rPlayer[8];
+				document.getElementById('pm').innerHTML = rPlayer[9];
 			}
 		}
 		
