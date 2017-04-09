@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Luke Berglund: Data Vizualization Project</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>   
-	  <h1> New York Yankees 2017 Depth Chart </h1>
+	  <h1 id= "teamHeader"></h1>
 	  <style>
 	h1{
 		text-align: center;
@@ -375,7 +375,7 @@
 	function changeTeam()
 		{
     			if ($(this).val() == '0')
-    			{			
+    			{	document.getElementById('teamHeader').innerHTML =  "New York Yankees 2017 Depth Chart"		
 				document.getElementById('cc').innerHTML = player[0];
 				document.getElementById('fb').innerHTML = player[1];
 				document.getElementById('sb').innerHTML = player[2];
@@ -388,7 +388,7 @@
 				document.getElementById('pm').innerHTML = player[9];
 			}
 			if ($(this).val() == '1')
-			{
+			{	document.getElementById('teamHeader').innerHTML =  "New York Mets 2017 Depth Chart"
 				document.getElementById('cc').innerHTML = curPlayer[0];
 				document.getElementById('fb').innerHTML = curPlayer[1];
 				document.getElementById('sb').innerHTML = curPlayer[2];
