@@ -247,6 +247,14 @@
 	 </style>
 </head>
   <body>
+	  
+	 <div id ='sTeam'>
+    		<select id ="selTeam">
+		      <option value ="0">Yankees</option>
+		      <option value ="1">Mets</option>
+    		</select>
+	</div> 
+	  
 	<div id="stadium">
 	    <div id="field" class="mowed-grass"></div>
 	    <div id="in-field"></div>
@@ -267,7 +275,7 @@
 	</div>
 	  
 	<div id="about">
-	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repositoryy</a>
+	  <a href="https://github.com/lukeberglund/Data-Viz-Project">Data-Viz Git Repository</a>
 	</div>
 	<div id="firstBase">
 	  <p id= "fb"></p>
@@ -319,10 +327,12 @@
     		$.each(data.Yankees, function (index, Yankees) {
 			console.log( index + ": " + Yankees.player + Yankees.position ); 
 			player.push(Yankees.player);
+			/*
 			curPlayer.push(Yankees.number);
 			curPlayer.push(Yankees.player);
 			curPlayer.push(Yankees.position);
 			curPlayer.push(Yankees.BattingAvg);
+			*/
 			nxtCurPlayer.push( {
 				Player: Yankees.player,
 				position: Yankees.position,
@@ -332,17 +342,52 @@
 			
 		});
 		
+		
+		$.each(data.Mets, function (index, Mets) {
+			console.log( index + ": " + Mets.player + Mets.position ); 
+			curPlayer.push(Mets.player);
+		});
+		
+		
 		function setPlayer(){
 			document.getElementById('ps').innerHTML = curPlayer[0].player;
 			alert(curPlayer[0].BattingAvg);
 		}
 		
-		/*firstBase.push(player[1]);
-		secondBase.push(player[2]);
-		*/
-		
-		
-		
+		$("#dropdown").on('change', function()
+    			{
+    			if ($(this).val() == '0')
+    			{			
+				document.getElementById('cc').innerHTML = player[0];
+				document.getElementById('fb').innerHTML = player[1];
+				document.getElementById('sb').innerHTML = player[2];
+				document.getElementById('tb').innerHTML = player[3];
+				document.getElementById('ss').innerHTML = player[4];
+				document.getElementById('lf').innerHTML = player[5];
+				document.getElementById('cf').innerHTML = player[6];
+				document.getElementById('rf').innerHTML = player[7];
+				document.getElementById('dh').innerHTML = player[8];
+				document.getElementById('pm').innerHTML = player[9];
+			}
+			if ($(this).val() == '1')
+			{
+				document.getElementById('cc').innerHTML = curPlayer[0];
+				document.getElementById('fb').innerHTML = curPlayer[1];
+				document.getElementById('sb').innerHTML = curPlayer[2];
+				document.getElementById('tb').innerHTML = curPlayer[3];
+				document.getElementById('ss').innerHTML = curPlayer[4];
+				document.getElementById('lf').innerHTML = curPlayer[5];
+				document.getElementById('cf').innerHTML = curPlayer[6];
+				document.getElementById('rf').innerHTML = curPlayer[7];
+				document.getElementById('dh').innerHTML = curPlayer[8];
+				document.getElementById('pm').innerHTML = curPlayer[9];
+			}
+		});
+
+
+						
+			
+		/*
     		console.log(player); 
 		console.log(curPlayer);
 		console.log(nxtCurPlayer);
@@ -356,6 +401,7 @@
 		document.getElementById('rf').innerHTML = player[7];
 		document.getElementById('dh').innerHTML = player[8];
 		document.getElementById('pm').innerHTML = player[9];
+		*/
 		
 	});	
 		
